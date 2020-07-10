@@ -32,7 +32,7 @@ Corda provides a number of flexible query mechanisms for accessing the Vault:
 
 
 * Vault Query API
-* Using a JDBC session (as described in [Persistence](api-persistence.md#jdbc-session))
+* Using a JDBC session (as described in [API: Persistence](api-persistence.md#jdbc-session))
 * Custom [JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html)/[JPQL](http://docs.jboss.org/hibernate/orm/current/userguide/html_single/Hibernate_User_Guide.html#hql) queries
 * Custom 3rd party Data Access frameworks such as [Spring Data](http://projects.spring.io/spring-data)
 
@@ -200,7 +200,7 @@ interfaces' common state attributes to the **VAULT_LINEAR_STATES** table.{{< /no
 
 
 * `VaultCustomQueryCriteria` provides the means to specify one or many arbitrary expressions on attributes defined
-by a custom contract state that implements its own schema as described in the [Persistence](api-persistence.md)
+by a custom contract state that implements its own schema as described in the [API: Persistence](api-persistence.md)
 documentation and associated examples. Custom criteria expressions are expressed using one of the following type-safe forms of
 `CriteriaExpression`: `BinaryLogical`, `Not`, `ColumnPredicateExpression`, and `AggregateFunctionExpression`. The
 `ColumnPredicateExpression` allows for the specification of arbitrary criteria using the previously enumerated operator
@@ -209,7 +209,7 @@ construction of custom criteria using any combination of `ColumnPredicate`. See 
 `QueryCriteriaUtils` for a complete specification of the DSL.
 {{< note >}}
 Custom contract schemas are automatically registered upon node startup for CorDapps. Please refer to
-[Persistence](api-persistence.md) for mechanisms of registering custom schemas for different testing
+[API: Persistence](api-persistence.md) for mechanisms of registering custom schemas for different testing
 purposes.{{< /note >}}
 
 
@@ -254,7 +254,7 @@ When specifying the `ContractType` as a parameterised type to the `QueryCriteria
 {{< /note >}}
 
 The Vault Query API leverages the rich semantics of the underlying JPA [Hibernate](https://docs.jboss.org/hibernate/jpa/2.1/api/) based
-[Persistence](api-persistence.md) framework adopted by Corda.
+[API: Persistence](api-persistence.md) framework adopted by Corda.
 
 
 {{< note >}}
