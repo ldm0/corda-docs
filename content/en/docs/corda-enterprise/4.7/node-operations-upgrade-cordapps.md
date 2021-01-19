@@ -35,8 +35,7 @@ be replaced with the new version.
 There are two types of contract/state upgrade:
 
 
-* *Implicit:* By allowing multiple implementations of the contract ahead of time, using constraints. See
-api-contract-constraints to learn more.
+* *Implicit:* By allowing multiple implementations of the contract ahead of time, using constraints. See [Contract Constraints](cordapps/api-contract-constraints.md) to learn more.
 * *Explicit:* By creating a special *contract upgrade transaction* and getting all participants of a state to sign it using the
 contract upgrade flows.
 

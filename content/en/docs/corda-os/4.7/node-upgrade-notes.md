@@ -24,9 +24,12 @@ applications. It consists of the following steps:
 
 * Drain the node.
 * Make a backup of your node directories and/or database.
+* Upgrade the node to Corda 4.0 or later.
 * Replace the `corda.jar` file with the new version.
-* Start up the node. This step may incur a delay whilst any needed database migrations are applied.
-* Undrain it to re-enable processing of new inbound flows.
+* Update configuration.
+* Start the node with run-migration-scripts sub-command. This step may incur a delay whilst any needed database migrations are applied.
+* Start the node in the normal way.
+* Undrain the node.
 
 The protocol is designed to tolerate node outages, so during the upgrade process peers on the network will wait for your node to come back.
 
@@ -57,7 +60,7 @@ user guide to learn how to make backups.
 
 We provide some [backup recommendations](node-administration.md#backup-recommendations) if you’d like more detail.
 
-## Step 3. Upgrade the node database to Corda 4.0 or later
+## Step 3. Upgrade the node to Corda 4.0 or later
 
 Ensure your node is running Corda 4.0 or later.
 
