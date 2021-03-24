@@ -540,6 +540,10 @@ They need to be run in the correct order, as shown below:
 ```bash
 cd network-services/deployment/k8s/helm
 
+# Add the kubernetes-dashbard helm repo and install the kubernetes dashboard
+helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
+helm install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard -f dashboard/values.yaml -n kube-system
+
 # These Helm charts trigger public IP allocation
 helm install idman-ip idman-ip
 helm install notary-ip notary-ip
